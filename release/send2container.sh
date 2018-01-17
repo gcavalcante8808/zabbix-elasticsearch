@@ -2,8 +2,8 @@
 
 CONTAINER_NAME=dockerzabbix_agentd_1
 
-for i in $(ls *.py); do 
-    pyinstaller -F $i;
+for i in $(ls ../scripts/*.py); do 
+    pyinstaller -F ../scripts/$i;
     rm *.spec 
 done
 
