@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 import json
 import argparse
 import requests
-
+import sys
 
 def check_es_health(url, metric):
     """
@@ -18,7 +18,7 @@ def check_es_health(url, metric):
     
     if metric in state.keys():
         print(result.json()[metric])
-        exit(0)
+        sys.exit(0)
 
     raise ValueError('The Key %s provided not exists on the response' %metric)
 

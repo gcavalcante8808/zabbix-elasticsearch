@@ -17,7 +17,7 @@ def discover_es_index(url):
     state = result.json()
     
     result = [{"{#ES_INDEX}":item["index"], "{#ES_UUID}": item["uuid"]} for item in state ]
-    print(json.dumps(result))
+    print(json.dumps({'data':result}))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

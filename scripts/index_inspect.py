@@ -4,6 +4,7 @@ import json
 import argparse
 import requests
 
+
 class InspectIndex():
     """ Stub """
 

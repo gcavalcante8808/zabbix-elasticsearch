@@ -3,6 +3,8 @@ from urllib.parse import urlparse
 import json
 import argparse
 import requests
+import sys
+
 
 class InspectIndex():
     """ Stub """
@@ -24,7 +26,7 @@ class InspectIndex():
         
         if metric in state.keys():
             print(state[metric])
-            exit(0)
+            sys.exit(0)
 
         raise ValueError('The Key %s provided not exists on the response' %metric)        
 
